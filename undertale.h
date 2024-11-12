@@ -12,6 +12,8 @@
 #include <QMetaObject>
 #include <QPushButton>
 #include <QLayout>
+#include <QGraphicsProxyWidget>
+#include <QGraphicsView>
 
 #include "nivel.h"
 #include "alma.h"
@@ -24,33 +26,37 @@ class UnderTale:public Nivel
 {
     Q_OBJECT
 public:
-    UnderTale(QGridLayout*& Layout, QGraphicsScene*& Escena, QString FileName);
+    UnderTale(QGridLayout*& Layout, QGraphicsScene*& Escena, QString FileName, QMediaPlayer*& Reproductor_);
     ~UnderTale();
 
     friend void Ataque1(UnderTale& UT);
     friend void Ataque2(UnderTale& UT);
     friend void Ataque3(UnderTale& UT);
-    qreal Angulo;
+    qreal NumVar;
     friend void Ataque4(UnderTale& UT);
-    friend void StopSpawn(UnderTale& UT);
+    friend void Ataque5(UnderTale& UT);
+    friend void Ataque6(UnderTale& UT);
 
-    enum class AtaqueActivo {Ninguno, ATK1, ATK2, ATK3, ATK4};
+    enum class AtaqueActivo {Ninguno, ATK1, ATK2, ATK3, ATK4, ATK5, ATK6};
     AtaqueActivo Atk;
 
 private:
-    QGraphicsVideoItem* CutScene;
     QGraphicsRectItem* Caja;
     QTimer* AtkDuration;
+    QTimer*AtkDelay;
     QTimer* Spawn;
+    QGraphicsTextItem* GAMEOVER;
+
     QMetaObject::Connection AtkConnection;
     QMetaObject::Connection OtherConnection;
 
-    //Para debugging
     QPushButton* Reproducir;
 
+    QVector<QGraphicsProxyWidget*> BotonesP;
+
+    void ClearAll();
 private slots:
     void StartGame();
-    void StopGame();
 
     void GameOver();
     void GameOverTransition();
@@ -60,7 +66,11 @@ private slots:
     void lluviaDeDonas();
     void DuffRound(qreal& Angulo);
     void Burbujas();
+    void BeerJump();
+    void BlueBeer(qreal& SpawnedNumber);
     void AttackPattern();
+
+    void StopSpawn();
 
 signals:
     void ReturnToMainMenu();

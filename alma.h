@@ -26,6 +26,8 @@ public:
     void setHealthBar();
     void addHealthBar();
     void removeHealthBar();
+    void changeSoulMode();
+    bool isMoving();
 
 private:
     QGraphicsPixmapItem* alma;
@@ -34,6 +36,7 @@ private:
     int vida;
     int vidamax;
     bool Invencible;
+    bool Azul;
     QTimer IVF;
     QGraphicsRectItem* HealthBar;
     QGraphicsRectItem* HealthBox;
@@ -53,6 +56,7 @@ public slots:
 signals:
     void gameOver();
     void Center();
+    void SoulMode();
 };
 
 #endif // ALMA_H

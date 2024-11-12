@@ -1,6 +1,6 @@
 #include "burbuja.h"
 
-Burbuja::Burbuja(Alma* alma, int x, int y, int damage, QGraphicsScene* Escena_, QString SpriteFileName, int CantMov, int TMov, int AnguloInicial):MeleeAT(alma, x, y, damage, Escena_, SpriteFileName, CantMov, TMov), Angulo(AnguloInicial) {
+Burbuja::Burbuja(Alma* alma, int x, int y, int damage, QGraphicsScene* Escena_, QString SpriteFileName, bool Azul_, int CantMov, int TMov, int AnguloInicial):MeleeAT(alma, x, y, damage, Escena_, SpriteFileName, Azul_, CantMov, TMov), Angulo(AnguloInicial) {
     setScale(0.75);
     if (ConexionMov){
         disconnect(ConexionMov);

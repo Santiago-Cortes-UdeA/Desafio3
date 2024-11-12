@@ -10,12 +10,13 @@ class Ataque:public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
-    Ataque(Alma* alma, int x, int y, int damage_, QGraphicsScene* Escena);
+    Ataque(Alma* alma, int x, int y, int damage_, QGraphicsScene* Escena, bool Azul_=false);
     ~Ataque();
 protected:
     int posx;
     int posy;
     int damage;
+    bool Azul;
     Alma* jugador;
     QTimer* Check;
     QGraphicsScene* Escena;

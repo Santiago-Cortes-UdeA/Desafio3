@@ -14,5 +14,6 @@
     <qresource prefix="/Videos">
         <file>Final Cutscene.mp4</file>
         <file>Starting Cutscene.mp4</file>
+        <file>Intro Cutscene.mp4</file>
     </qresource>
 </RCC>

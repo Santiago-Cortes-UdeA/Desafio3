@@ -518,19 +518,28 @@ C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_Min
   C:/Qt/6.8.0/mingw_64/include/QtNetwork/qtnetworkversion.h \
   C:/Qt/6.8.0/mingw_64/include/QtNetwork/qudpsocket.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsProxyWidget \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsRectItem \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsScene \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsTextItem \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsView \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLayout \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicslayoutitem.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicsproxywidget.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicsview.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicswidget.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qscrollarea.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \

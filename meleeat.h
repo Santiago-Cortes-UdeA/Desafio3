@@ -12,7 +12,7 @@ class MeleeAT:public Ataque
 {
     Q_OBJECT
 public:
-    MeleeAT(Alma* alma, int x, int y, int damage, QGraphicsScene* Escena_, QString SpriteFileName, int CantMov = 0, int TMov = 0, int DirMov = 0);
+    MeleeAT(Alma* alma, int x, int y, int damage, QGraphicsScene* Escena_, QString SpriteFileName, bool Azul_ = false, int CantMov = 0, int TMov = 0, int DirMov = 0);
     void AddToScene();
     void RemoveFromScene();
 

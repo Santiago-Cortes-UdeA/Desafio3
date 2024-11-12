@@ -3,23 +3,24 @@
 
 #include <QtMultimedia/QtMultimedia>
 #include <QtMultimedia/QMediaPlayer>
-#include <QObject>
+#include <QGraphicsView>
 #include <QLayout>
 
 #include "alma.h"
 
-class Nivel: public QObject
+class Nivel: public QGraphicsView
 {
     Q_OBJECT
 protected:
     Alma* Jugador;
     QMediaPlayer* Reproductor;
-    QAudioOutput* AudioOutput;
     QGraphicsPixmapItem* BackGround;
     QGraphicsScene* Escena;
     QGridLayout* Layout;
 public:
-    Nivel(QGraphicsScene*& Escena_, QString FileName, QGridLayout*& Layout_);
+    Nivel(QGraphicsScene*& Escena_, QString FileName, QGridLayout*& Layout_, QMediaPlayer*& Reproductor_);
+protected:
+    void keyPressEvent(QKeyEvent* event) override;
 };
 
 #endif // NIVEL_H

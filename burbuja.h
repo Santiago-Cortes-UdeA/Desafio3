@@ -5,7 +5,7 @@
 class Burbuja:public MeleeAT
 {
 public:
-    Burbuja(Alma* alma, int x, int y, int damage, QGraphicsScene* Escena_, QString SpriteFileName, int CantMov=0, int TMov=0, int AnguloInicial=0);
+    Burbuja(Alma* alma, int x, int y, int damage, QGraphicsScene* Escena_, QString SpriteFileName, bool Azul_, int CantMov=0, int TMov=0, int AnguloInicial=0);
 
 private:
     qreal Angulo;

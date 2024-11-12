@@ -39,6 +39,13 @@ private:
     QPushButton* Nivel2;
     QGraphicsProxyWidget* Nivel2P;
 
+    QMediaPlayer* Reproductor;
+    QAudioOutput* AudioOutput;
+    QGraphicsVideoItem* CutScene;
+
+    QMetaObject::Connection ConnectionA;
+    QMetaObject::Connection ConnectionB;
+
 private slots:
     void LoadUTLevel();
     void MainMenu();
