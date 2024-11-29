@@ -523,6 +523,7 @@ C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_Min
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsScene \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsTextItem \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLayout \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
@@ -537,6 +538,7 @@ C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_Min
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicsview.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicswidget.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmainwindow.h \
@@ -894,7 +896,11 @@ C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_Min
   C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/ataque.h \
   C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/blaster.h \
   C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/burbuja.h \
+  C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cabana.h \
   C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cerveza.h \
   C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/meleeat.h \
+  C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/mountain.h \
   C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/nivel.h \
+  C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/obstaculos.h \
+  C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/player.h \
   C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/undertale.h

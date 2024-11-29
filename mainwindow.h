@@ -8,8 +8,10 @@
 #include <QLayout>
 #include <QGraphicsPixmapItem>
 #include <QGraphicsProxyWidget>
+#include <QLabel>
 
 #include "undertale.h"
+#include "mountain.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -34,10 +36,11 @@ private:
 
     QGraphicsPixmapItem* Fondo;
 
-    QPushButton* Nivel1;
-    QGraphicsProxyWidget* Nivel1P;
-    QPushButton* Nivel2;
-    QGraphicsProxyWidget* Nivel2P;
+    QVector<QPushButton*> Botones;
+    QVector<QGraphicsProxyWidget*> BotonesP;
+
+    QLabel* Info;
+    QGraphicsProxyWidget* InfoP;
 
     QMediaPlayer* Reproductor;
     QAudioOutput* AudioOutput;
@@ -46,8 +49,12 @@ private:
     QMetaObject::Connection ConnectionA;
     QMetaObject::Connection ConnectionB;
 
+    int Stats[6];
+
 private slots:
     void LoadUTLevel();
+    void LoadMountainLevel();
+    void LoadAchievements();
     void MainMenu();
 };
 #endif // MAINWINDOW_H

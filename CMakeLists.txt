@@ -32,6 +32,13 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         cerveza.h cerveza.cpp
         burbuja.h burbuja.cpp
         undertale.h undertale.cpp
+        cabana.h
+        obstaculos.h
+        cabana.cpp
+        obstaculos.cpp
+        mountain.h mountain.cpp
+        player.h player.cpp
+
 
     )
 # Define target properties for Android with Qt 6 as:

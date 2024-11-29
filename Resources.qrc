@@ -2,6 +2,7 @@
     <qresource prefix="/Canciones">
         <file>Megalo.mp3</file>
         <file>Determination.mp3</file>
+        <file>wel.mp3</file>
     </qresource>
     <qresource prefix="/Sprites">
         <file>HomerFightBlack.png</file>

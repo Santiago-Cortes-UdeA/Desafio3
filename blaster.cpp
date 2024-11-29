@@ -8,7 +8,7 @@ Blaster::Blaster(Alma* alma, QGraphicsScene* Escena, int x, int y, qreal orienta
     Delay->setSingleShot(true);
     Delay->start(1000);
     connect(Delay, &QTimer::timeout, this, &Blaster::Disparar);
-    connect(jugador, &Alma::gameOver, this, &Blaster::Desaparecer);
+    connect(jugador, &Player::gameOver, this, &Blaster::Desaparecer);
     Escena->addItem(this);
 }
 
@@ -36,7 +36,7 @@ void Blaster::Colision(){
 void Blaster::Desaparecer(){
     disconnect(Check, &QTimer::timeout, this, &Blaster::Colision);
     disconnect(Delay, &QTimer::timeout, this, &Blaster::Desaparecer);
-    disconnect(jugador, &Alma::gameOver, this, &Blaster::Desaparecer);
+    disconnect(jugador, &Player::gameOver, this, &Blaster::Desaparecer);
     Check->stop();
     Delay->stop();
     if (Laser){

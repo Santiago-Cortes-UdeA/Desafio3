@@ -137,6 +137,38 @@ build CMakeFiles/Intento3.dir/undertale.cpp.obj: CXX_COMPILER__Intento3_unscanne
   OBJECT_DIR = CMakeFiles\Intento3.dir
   OBJECT_FILE_DIR = CMakeFiles\Intento3.dir
 
+build CMakeFiles/Intento3.dir/cabana.cpp.obj: CXX_COMPILER__Intento3_unscanned_Debug C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cabana.cpp || cmake_object_order_depends_target_Intento3
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Intento3.dir\cabana.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Intento3_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.0/mingw_64/include/QtGui -isystem C:/Qt/6.8.0/mingw_64/include/QtMultimedia -isystem C:/Qt/6.8.0/mingw_64/include/QtNetwork -isystem C:/Qt/6.8.0/mingw_64/include/QtMultimediaWidgets
+  OBJECT_DIR = CMakeFiles\Intento3.dir
+  OBJECT_FILE_DIR = CMakeFiles\Intento3.dir
+
+build CMakeFiles/Intento3.dir/obstaculos.cpp.obj: CXX_COMPILER__Intento3_unscanned_Debug C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/obstaculos.cpp || cmake_object_order_depends_target_Intento3
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Intento3.dir\obstaculos.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Intento3_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.0/mingw_64/include/QtGui -isystem C:/Qt/6.8.0/mingw_64/include/QtMultimedia -isystem C:/Qt/6.8.0/mingw_64/include/QtNetwork -isystem C:/Qt/6.8.0/mingw_64/include/QtMultimediaWidgets
+  OBJECT_DIR = CMakeFiles\Intento3.dir
+  OBJECT_FILE_DIR = CMakeFiles\Intento3.dir
+
+build CMakeFiles/Intento3.dir/mountain.cpp.obj: CXX_COMPILER__Intento3_unscanned_Debug C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/mountain.cpp || cmake_object_order_depends_target_Intento3
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Intento3.dir\mountain.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Intento3_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.0/mingw_64/include/QtGui -isystem C:/Qt/6.8.0/mingw_64/include/QtMultimedia -isystem C:/Qt/6.8.0/mingw_64/include/QtNetwork -isystem C:/Qt/6.8.0/mingw_64/include/QtMultimediaWidgets
+  OBJECT_DIR = CMakeFiles\Intento3.dir
+  OBJECT_FILE_DIR = CMakeFiles\Intento3.dir
+
+build CMakeFiles/Intento3.dir/player.cpp.obj: CXX_COMPILER__Intento3_unscanned_Debug C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/player.cpp || cmake_object_order_depends_target_Intento3
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Intento3.dir\player.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Intento3_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.0/mingw_64/include/QtGui -isystem C:/Qt/6.8.0/mingw_64/include/QtMultimedia -isystem C:/Qt/6.8.0/mingw_64/include/QtNetwork -isystem C:/Qt/6.8.0/mingw_64/include/QtMultimediaWidgets
+  OBJECT_DIR = CMakeFiles\Intento3.dir
+  OBJECT_FILE_DIR = CMakeFiles\Intento3.dir
+
 build CMakeFiles/Intento3.dir/Intento3_autogen/EWIEGA46WW/qrc_Resources.cpp.obj: CXX_COMPILER__Intento3_unscanned_Debug C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Intento3_autogen/EWIEGA46WW/qrc_Resources.cpp || cmake_object_order_depends_target_Intento3
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\Intento3.dir\Intento3_autogen\EWIEGA46WW\qrc_Resources.cpp.obj.d
@@ -153,7 +185,7 @@ build CMakeFiles/Intento3.dir/Intento3_autogen/EWIEGA46WW/qrc_Resources.cpp.obj:
 #############################################
 # Link the executable Intento3.exe
 
-build Intento3.exe: CXX_EXECUTABLE_LINKER__Intento3_Debug CMakeFiles/Intento3.dir/Intento3_autogen/mocs_compilation.cpp.obj CMakeFiles/Intento3.dir/main.cpp.obj CMakeFiles/Intento3.dir/mainwindow.cpp.obj CMakeFiles/Intento3.dir/alma.cpp.obj CMakeFiles/Intento3.dir/ataque.cpp.obj CMakeFiles/Intento3.dir/blaster.cpp.obj CMakeFiles/Intento3.dir/meleeat.cpp.obj CMakeFiles/Intento3.dir/nivel.cpp.obj CMakeFiles/Intento3.dir/cerveza.cpp.obj CMakeFiles/Intento3.dir/burbuja.cpp.obj CMakeFiles/Intento3.dir/undertale.cpp.obj CMakeFiles/Intento3.dir/Intento3_autogen/EWIEGA46WW/qrc_Resources.cpp.obj | C$:/Qt/6.8.0/mingw_64/lib/libQt6MultimediaWidgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Multimedia.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Network.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.0/mingw_64/lib/libQt6EntryPoint.a || Intento3_autogen Intento3_autogen_timestamp_deps
+build Intento3.exe: CXX_EXECUTABLE_LINKER__Intento3_Debug CMakeFiles/Intento3.dir/Intento3_autogen/mocs_compilation.cpp.obj CMakeFiles/Intento3.dir/main.cpp.obj CMakeFiles/Intento3.dir/mainwindow.cpp.obj CMakeFiles/Intento3.dir/alma.cpp.obj CMakeFiles/Intento3.dir/ataque.cpp.obj CMakeFiles/Intento3.dir/blaster.cpp.obj CMakeFiles/Intento3.dir/meleeat.cpp.obj CMakeFiles/Intento3.dir/nivel.cpp.obj CMakeFiles/Intento3.dir/cerveza.cpp.obj CMakeFiles/Intento3.dir/burbuja.cpp.obj CMakeFiles/Intento3.dir/undertale.cpp.obj CMakeFiles/Intento3.dir/cabana.cpp.obj CMakeFiles/Intento3.dir/obstaculos.cpp.obj CMakeFiles/Intento3.dir/mountain.cpp.obj CMakeFiles/Intento3.dir/player.cpp.obj CMakeFiles/Intento3.dir/Intento3_autogen/EWIEGA46WW/qrc_Resources.cpp.obj | C$:/Qt/6.8.0/mingw_64/lib/libQt6MultimediaWidgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Multimedia.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Network.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.0/mingw_64/lib/libQt6EntryPoint.a || Intento3_autogen Intento3_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.8.0/mingw_64/lib/libQt6MultimediaWidgets.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Multimedia.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Network.a  -lws2_32  C:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.8.0/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -257,7 +289,7 @@ build Intento3_autogen/timestamp Intento3_autogen/mocs_compilation.cpp | ${cmake
 #############################################
 # Custom command for Intento3_autogen\EWIEGA46WW\qrc_Resources.cpp
 
-build Intento3_autogen/EWIEGA46WW/qrc_Resources.cpp | ${cmake_ninja_workdir}Intento3_autogen/EWIEGA46WW/qrc_Resources.cpp: CUSTOM_COMMAND C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Resources.qrc CMakeFiles/Intento3_autogen.dir/AutoRcc_Resources_EWIEGA46WW_Info.json C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/HomerFightBlack.png Dona2.png Alma.png C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Starting$ Cutscene.mp4 C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Intro$ Cutscene.mp4 C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Final$ Cutscene.mp4 C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Determination.mp3 C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Megalo.mp3 C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/8bitoperator.ttf C$:/Qt/6.8.0/mingw_64/bin/rcc.exe C$:/Qt/6.8.0/mingw_64/bin/rcc.exe || Intento3_autogen Intento3_autogen_timestamp_deps
+build Intento3_autogen/EWIEGA46WW/qrc_Resources.cpp | ${cmake_ninja_workdir}Intento3_autogen/EWIEGA46WW/qrc_Resources.cpp: CUSTOM_COMMAND C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Resources.qrc CMakeFiles/Intento3_autogen.dir/AutoRcc_Resources_EWIEGA46WW_Info.json C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/HomerFightBlack.png Dona2.png Alma.png C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Starting$ Cutscene.mp4 C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Intro$ Cutscene.mp4 C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Final$ Cutscene.mp4 C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Determination.mp3 C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/wel.mp3 C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Megalo.mp3 C$:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/8bitoperator.ttf C$:/Qt/6.8.0/mingw_64/bin/rcc.exe C$:/Qt/6.8.0/mingw_64/bin/rcc.exe || Intento3_autogen Intento3_autogen_timestamp_deps
   COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\ozfluhs\Desktop\Desafio3\Jueguitooo\Intento3\build\Desktop_Qt_6_8_0_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/CMakeFiles/Intento3_autogen.dir/AutoRcc_Resources_EWIEGA46WW_Info.json Debug"
   DESC = Automatic RCC for Resources.qrc
   restat = 1

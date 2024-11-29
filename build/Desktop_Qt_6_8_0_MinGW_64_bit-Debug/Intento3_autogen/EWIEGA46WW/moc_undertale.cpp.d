@@ -893,4 +893,5 @@ C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_Min
   C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/burbuja.h \
   C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cerveza.h \
   C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/meleeat.h \
-  C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/nivel.h
+  C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/nivel.h \
+  C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/player.h

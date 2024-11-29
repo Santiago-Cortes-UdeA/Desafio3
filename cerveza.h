@@ -3,6 +3,7 @@
 #include "ataque.h"
 #include <QGraphicsRectItem>
 #include "alma.h"
+#include "player.h"
 class Cerveza:public Ataque
 {
     Q_OBJECT
@@ -16,6 +17,9 @@ private:
     QTimer* Subida;
     void Subir();
     QTimer* Quitar;
+
+private slots:
+    void CollisionRelleno();
 
 signals:
     void tope();

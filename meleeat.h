@@ -6,6 +6,7 @@
 #include <Qdebug>
 #include "ataque.h"
 #include "alma.h"
+#include "player.h"
 #include <QTimer>
 #include <QMetaObject>
 class MeleeAT:public Ataque

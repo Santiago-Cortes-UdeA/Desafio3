@@ -410,6 +410,12 @@
 			null
 		],
 		[
+			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cabana.h",
+			"MU",
+			"EWIEGA46WW/moc_cabana.cpp",
+			null
+		],
+		[
 			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cerveza.h",
 			"MU",
 			"EWIEGA46WW/moc_cerveza.cpp",
@@ -428,9 +434,27 @@
 			null
 		],
 		[
+			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/mountain.h",
+			"MU",
+			"EWIEGA46WW/moc_mountain.cpp",
+			null
+		],
+		[
 			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/nivel.h",
 			"MU",
 			"EWIEGA46WW/moc_nivel.cpp",
+			null
+		],
+		[
+			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/obstaculos.h",
+			"MU",
+			"EWIEGA46WW/moc_obstaculos.cpp",
+			null
+		],
+		[
+			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/player.h",
+			"MU",
+			"EWIEGA46WW/moc_player.cpp",
 			null
 		],
 		[
@@ -538,6 +562,11 @@
 			null
 		],
 		[
+			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cabana.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cerveza.cpp",
 			"MU",
 			null
@@ -558,7 +587,22 @@
 			null
 		],
 		[
+			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/mountain.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/nivel.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/obstaculos.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/player.cpp",
 			"MU",
 			null
 		],

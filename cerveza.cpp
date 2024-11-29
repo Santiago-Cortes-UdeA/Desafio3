@@ -12,7 +12,8 @@ Cerveza::Cerveza(Alma* alma, int x, int y, int damage_, QGraphicsScene *Escena, 
     Subida->start(500);
     connect(Subida,&QTimer::timeout,this,&Cerveza::Subir);
     connect(Quitar, &QTimer::timeout, this, &Cerveza::Remover);
-    connect(jugador, &Alma::gameOver, this, &Cerveza::Remover);
+    connect(jugador, &Player::gameOver, this, &Cerveza::Remover);
+    connect(Check, &QTimer::timeout, this, &Cerveza::CollisionRelleno);
 }
 
 void Cerveza::Subir(){
@@ -29,7 +30,8 @@ void Cerveza::Subir(){
 }
 
 void Cerveza::Remover(){
-    disconnect(jugador, &Alma::gameOver, this, &Cerveza::Remover);
+    disconnect(Check, &QTimer::timeout, this, &Cerveza::CollisionRelleno);
+    disconnect(jugador, &Player::gameOver, this, &Cerveza::Remover);
     disconnect(Quitar, &QTimer::timeout, this, &Cerveza::Remover);
     Check->stop();
     Subida->stop();
@@ -38,4 +40,10 @@ void Cerveza::Remover(){
     delete Relleno;
     Escena->removeItem(this);
     delete this;
+}
+
+void Cerveza::CollisionRelleno(){
+    if(Relleno->collidesWithItem(jugador)&&jugador->getVida()>0){
+            jugador->BajarVida(damage);
+    }
 }

@@ -6,6 +6,7 @@
 #include <QGraphicsScene>
 #include <QMetaObject>
 #include "alma.h"
+#include "player.h"
 #include "ataque.h"
 
 class Blaster:public Ataque

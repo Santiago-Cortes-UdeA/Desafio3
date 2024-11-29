@@ -3,24 +3,23 @@
 
 #include <QtMultimedia/QtMultimedia>
 #include <QtMultimedia/QMediaPlayer>
-#include <QGraphicsView>
-#include <QLayout>
+#include <QGraphicsScene>
 
-#include "alma.h"
+#include "player.h"
 
-class Nivel: public QGraphicsView
+class Nivel: public QObject
 {
     Q_OBJECT
 protected:
-    Alma* Jugador;
+    Player* player;
     QMediaPlayer* Reproductor;
     QGraphicsPixmapItem* BackGround;
     QGraphicsScene* Escena;
-    QGridLayout* Layout;
+    void setPlayer(Player* jugador){player=jugador;}
 public:
-    Nivel(QGraphicsScene*& Escena_, QString FileName, QGridLayout*& Layout_, QMediaPlayer*& Reproductor_);
-protected:
-    void keyPressEvent(QKeyEvent* event) override;
+    Nivel(QGraphicsScene*& Escena_, QString FileName, QMediaPlayer*& Reproductor_);
+
+    Player* getPlayerReference(){return player;}
 };
 
 #endif // NIVEL_H

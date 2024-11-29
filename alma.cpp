@@ -1,17 +1,11 @@
 #include "alma.h"
 
-Alma::Alma(QGraphicsScene *Escena_):posx(445),posy(445),vidamax(20), Invencible(false), Escena(Escena_), Mov(new QTimer(this)), dxR(0), dyU(0), dxL(0), dyD(0), Azul(false) {
+Alma::Alma(int MaxHP, QGraphicsScene *Escena_):Player(MaxHP, Escena_, 0, 0), dxR(0), dyU(0), dxL(0), dyD(0), Azul(false) {
     QPixmap pixmap("Alma.png");
     setPixmap(pixmap);
-    setPos(posx,posy);
-    vida=vidamax;
 
-    qDebug()<<posx<<" "<<pos().x();
-
-    setFlag(QGraphicsItem::ItemIsFocusable);
-
-    IVF.setSingleShot(true);
-    connect(&IVF, &QTimer::timeout, this, &Alma::Vulnerable);
+    IVF->setSingleShot(true);
+    connect(IVF, &QTimer::timeout, this, &Alma::Vulnerable);
 
     HealthBar = new QGraphicsRectItem;
     HealthBar->setRect(550,650,200,35);
@@ -24,8 +18,8 @@ Alma::Alma(QGraphicsScene *Escena_):posx(445),posy(445),vidamax(20), Invencible(
     InfoAlma = new QGraphicsTextItem;
     InfoJugador = new QGraphicsTextItem;
     QString Info = QString("%1 / %2")
-                       .arg(vida)
-                       .arg(vidamax);
+                       .arg(VidaActual)
+                       .arg(VidaMax);
     InfoAlma->setFont(QFont("Mars Needs Cunnilingus", 25));
     InfoJugador->setFont(QFont("Mars Needs Cunnilingus", 25));
     InfoAlma->setPlainText(Info);
@@ -37,8 +31,7 @@ Alma::Alma(QGraphicsScene *Escena_):posx(445),posy(445),vidamax(20), Invencible(
 //____________________________________MOVEMENT____________________________________//
 
 void Alma :: keyPressEvent(QKeyEvent *event){
-    qDebug()<<"Key Press in Alma";
-    if (vida>0){
+    if (VidaActual>0){
         switch (event->key()){
         case Qt::Key_Up:
             if (!Azul){
@@ -63,7 +56,7 @@ void Alma :: keyPressEvent(QKeyEvent *event){
         }
 
         if (!Mov->isActive()){
-            Mov->start(40);
+            Mov->start(35);
         }
     }
 }
@@ -157,34 +150,37 @@ bool Alma::isMoving(){
     return true;
 }
 
-//____________________________________SOUL SETTERS____________________________________//
-
-void Alma::Reset(){
-    setFocus();
-    posx=630;
-    posy=445;
+void Alma::stopSoul(){
     dxR=0;
     dxL=0;
     dyU=0;
     dyD=0;
+}
+//____________________________________SOUL SETTERS____________________________________//
+
+void Alma::Reset(){
+    if (flags() != QGraphicsItem::ItemIsFocusable) setFlags(QGraphicsItem::ItemIsFocusable);
+    setFocus();
+    posx=630;
+    posy=445;
     setPos(posx,posy);
-    vida=vidamax;
+    VidaActual=VidaMax;
     HealthBar->setRect(550,650,200,35);
     setPixmap(QPixmap("Alma.png"));
     QString Info = QString("%1 / %2")
-                       .arg(vida)
-                       .arg(vidamax);
+                       .arg(VidaActual)
+                       .arg(VidaMax);
     InfoAlma->setPlainText(Info);
 }
 
 void Alma::BajarVida(int damage){
     if (Invencible) return;
-    vida-=damage;
-    if (vida>0){
+    VidaActual-=damage;
+    if (VidaActual>0){
         setPixmap(QPixmap("AlmaInv.png"));
         Invencible = true;
-        qDebug()<<"Vida actual: "<<vida;
-        IVF.start(1000);
+        qDebug()<<"Vida actual: "<<VidaActual;
+        IVF->start(1000);
         setHealthBar();
     }
     else{
@@ -194,13 +190,11 @@ void Alma::BajarVida(int damage){
         if (Azul){
             changeSoulMode();
         }
-        vida = 0;
+        VidaActual = 0;
         setHealthBar();
         setPixmap(QPixmap("Dead.png"));
-        dxR=0;
-        dxL=0;
-        dyU=0;
-        dyD=0;
+        stopSoul();
+        setFlag(QGraphicsItem::ItemIsFocusable,false);
         emit gameOver();
     }
 }
@@ -221,7 +215,7 @@ void Alma::changeSoulMode(){
         setPixmap(QPixmap("AlmaB.png"));
         if (!Mov->isActive()){
             dyD=-1;
-            Mov->start(40);
+            Mov->start(35);
         }
     }
     else{
@@ -231,11 +225,11 @@ void Alma::changeSoulMode(){
 //____________________________________HEALTH BAR____________________________________//
 
 void Alma::setHealthBar(){
-    qreal largo = (qreal(vida)/vidamax)*200;
+    qreal largo = (qreal(VidaActual)/VidaMax)*200;
     HealthBar->setRect(550,650,largo,35);
     QString Info = QString("%1 / %2")
-                       .arg(vida)
-                       .arg(vidamax);
+                       .arg(VidaActual)
+                       .arg(VidaMax);
     InfoAlma->setPlainText(Info);
 }
 

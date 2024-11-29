@@ -14,7 +14,7 @@ MeleeAT::MeleeAT(Alma* alma, int x, int y, int damage, QGraphicsScene* Escena_, 
         ConexionMov = connect (Desplazamiento, &QTimer::timeout, this, &MeleeAT::Movimiento);
         Desplazamiento->start(TiempoMov);
     }
-    connect(jugador, &Alma::gameOver, this, &MeleeAT::RemoveFromScene);
+    connect(jugador, &Player::gameOver, this, &MeleeAT::RemoveFromScene);
     AddToScene();
 }
 
@@ -25,7 +25,7 @@ void MeleeAT::AddToScene(){
 }
 
 void MeleeAT::RemoveFromScene(){
-    disconnect(jugador, &Alma::gameOver, this, &MeleeAT::RemoveFromScene);
+    disconnect(jugador, &Player::gameOver, this, &MeleeAT::RemoveFromScene);
     if (ConexionMov) disconnect(ConexionMov);
     Escena->removeItem(this);
     Check->stop();

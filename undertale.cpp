@@ -1,14 +1,20 @@
 #include "undertale.h"
 
-UnderTale::UnderTale(QGridLayout *&Layout, QGraphicsScene*& Escena, QString FileName, QMediaPlayer *&Reproductor_)
-    :Nivel(Escena, FileName, Layout, Reproductor_)
+UnderTale::UnderTale(QGraphicsScene*& Escena, QString FileName, QMediaPlayer *&Reproductor_, int playerHP)
+    : Nivel(Escena, FileName, Reproductor_)
     , AtkDuration(new QTimer(this))
     , AtkDelay(new QTimer(this))
     , Spawn(new QTimer(this))
     , Reproducir(new QPushButton("Iniciar Pelea"))
     , GAMEOVER(new QGraphicsTextItem)
+    , Luchar(new QGraphicsPixmapItem)
+    , Jugador (new Alma(playerHP, Escena))
 
 {
+    setPlayer(Jugador);
+
+    BackGround->setPos(210,0);
+
     Escena->setBackgroundBrush(Qt::black);
 
     Reproductor->setSource(QUrl("qrc:/Videos/Starting Cutscene.mp4"));
@@ -52,11 +58,13 @@ UnderTale::UnderTale(QGridLayout *&Layout, QGraphicsScene*& Escena, QString File
     connect(Boton2, &QPushButton::clicked, this, [=](){
         emit ReturnToMainMenu();
         ClearAll();
-        this->deleteLater();
+        delete Boton1;
+        delete Boton2;
+        delete GAMEOVER;
         disconnect();
     });
 
-    connect(Jugador, &Alma::gameOver, this, &UnderTale::GameOver);
+    connect(Jugador, &Player::gameOver, this, &UnderTale::GameOver);
 
     AtkConnection = connect(Reproducir, &QPushButton::clicked,this,[=](){
         StartGame();
@@ -74,6 +82,11 @@ UnderTale::UnderTale(QGridLayout *&Layout, QGraphicsScene*& Escena, QString File
     GAMEOVER->setPlainText(QString("GAME OVER"));
     GAMEOVER->setFont(QFont("Mars Needs Cunnilingus", 50));
     GAMEOVER->setPos(400,70);
+
+    QPixmap Fight ("Fight.png");
+    Luchar->setPixmap(Fight.copy(0,0, 110, 42));
+    Luchar->setScale(1.25);
+    Luchar->setZValue(-1);
 
     connect(AtkDelay, &QTimer::timeout, this, &UnderTale::AttackPattern);
 }
@@ -99,10 +112,8 @@ void UnderTale::StartGame(){
     Jugador->Reset();
     Reproductor->setSource(QUrl("qrc:/Canciones/Megalo.mp3"));
     Reproductor->play();
-    BackGround->setPos(210,0);
     Escena->addItem(BackGround);
     Jugador->addHealthBar();
-    Jugador->setFocus();
     Escena->addItem(Caja);
 
     AtkDelay->start(2500);
@@ -168,34 +179,54 @@ void Ataque2(UnderTale& UT){
 }
 
 void Ataque3(UnderTale& UT){
-    UT.Spawn->start(200);
-    UT.AtkConnection=UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, [&UT](){
-        UT.DuffRound(UT.NumVar);
-        UT.NumVar+=15;
-    });
-}
-
-void Ataque4(UnderTale& UT){
-    Cerveza * Beer = new Cerveza(UT.Jugador,390,565,5,UT.Escena,UT.AtkDuration);
-    UT.AtkConnection=UnderTale::connect(Beer, &Cerveza::tope, &UT, [&UT](){
-        UT.Spawn->start(1000);
-    });
-    UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, &UnderTale::Burbujas);
-}
-
-void Ataque5(UnderTale& UT){
     UT.Spawn->start(1500);
     UT.AtkConnection=UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, &UnderTale::BeerJump);
 }
 
-void Ataque6(UnderTale& UT){
+void Ataque4(UnderTale& UT){
     UT.Spawn->start(500);
-    UT.AtkConnection=UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, [&UT](){
-        UT.BlueBeer(UT.NumVar);
-        UT.NumVar+=1;
-    });
+    UT.AtkConnection=UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, &UnderTale::BlueBeer);
 }
 
+void Ataque5(UnderTale& UT){
+    UT.Spawn->start(1000);
+    UT.AtkConnection=UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, &UnderTale::BottleCircling);
+}
+
+void Ataque6(UnderTale& UT){
+    Cerveza * Beer = new Cerveza(UT.Jugador,390,565,5,UT.Escena,UT.AtkDuration);
+    UT.AtkConnection=UnderTale::connect(Beer, &Cerveza::tope, &UT, [&UT](){
+        UT.Spawn->start(1000);
+    });
+    UT.OtherConnection=UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, &UnderTale::Burbujas);
+}
+
+void Ataque7(UnderTale& UT){
+    UT.Spawn->start(1000);
+    UT.AtkConnection=UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, &UnderTale::SmallJump);
+}
+
+void Ataque8(UnderTale& UT){
+    UT.Spawn->start(300);
+    UT.AtkConnection=UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, &UnderTale::DonutBlaster);
+}
+
+void Ataque9(UnderTale& UT){
+    UT.Spawn->start(1500);
+    UT.AtkConnection=UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, &UnderTale::RandomJumps);
+}
+
+void AtaqueFinal(UnderTale& UT){
+    UT.Spawn->start(200);
+    UT.AtkConnection=UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, &UnderTale::DuffRound);
+}
+
+void EndingCutScene(UnderTale& UT){
+    UT.Luchar->setPos(60,800);
+    UT.Escena->addItem(UT.Luchar);
+
+    UT.AtkConnection=UnderTale::connect(UT.Spawn, &QTimer::timeout, &UT, &UnderTale::MoveFightButton);
+}
     //____________________________________ATTACK TIMER____________________________________//
 
 void UnderTale::StopSpawn(){
@@ -203,6 +234,8 @@ void UnderTale::StopSpawn(){
     switch (Atk){
     case (UnderTale::AtaqueActivo::Ninguno):
         break;
+    case (UnderTale::AtaqueActivo::ATK6):
+        UnderTale::disconnect(OtherConnection);
     default:
         UnderTale::disconnect(AtkConnection);
     }
@@ -226,8 +259,9 @@ void UnderTale::generarBlaster(){
     }
 }
 
-void UnderTale::DuffRound(qreal& Angulo){
-    new Blaster (Jugador, Escena, 645-(250*qSin(qDegreesToRadians(Angulo))),445+(250*qCos(qDegreesToRadians(Angulo))), Angulo);
+void UnderTale::DuffRound(){
+    new Blaster (Jugador, Escena, 625-(250*qSin(qDegreesToRadians(NumVar))),445+(250*qCos(qDegreesToRadians(NumVar))), NumVar);
+    NumVar+=15;
 }
 
 void UnderTale::Burbujas(){
@@ -242,9 +276,9 @@ void UnderTale::BeerJump(){
     new MeleeAT(Jugador, 890, 475, 4, Escena, "Botella.png", false, 10, 50, 180);
 }
 
-void UnderTale::BlueBeer(qreal &SpawnedNumber){
-    if (SpawnedNumber<=12){
-        if (int(SpawnedNumber)%2==0){
+void UnderTale::BlueBeer(){
+    if (NumVar<=12){
+        if (int(NumVar)%2==0){
             new MeleeAT(Jugador, 890, 540, 5, Escena, "Dona2.png", false, 15, 30, 180);
             new MeleeAT(Jugador, 890, 570, 5, Escena, "Dona2.png", false, 15, 30, 180);
         }
@@ -254,7 +288,7 @@ void UnderTale::BlueBeer(qreal &SpawnedNumber){
         }
     }
     else{
-        if (int(SpawnedNumber)%2==1){
+        if (int(NumVar)%2==1){
             new MeleeAT(Jugador, 390, 540, 5, Escena, "Dona2.png", false, 15, 30, 0);
             new MeleeAT(Jugador, 390, 570, 5, Escena, "Dona2.png", false, 15, 30, 0);
         }
@@ -263,53 +297,192 @@ void UnderTale::BlueBeer(qreal &SpawnedNumber){
             new MeleeAT(Jugador, 390, 375, 5, Escena, "Botella.png", true, 15, 30, 0);
         }
     }
+    NumVar++;
 }
 
+void UnderTale::SmallJump(){
+    NumVar=int(NumVar+1)%2;
+    int Angulo = (NumVar*180)+90;
+    int y = (NumVar==0)?470:510;
+    new MeleeAT(Jugador, 390, 570, 5, Escena, "Dona2.png", false, 10, 30, 0);
+    new MeleeAT(Jugador, 890, 570, 5, Escena, "Dona2.png", false, 10, 30, 180);
+
+
+    new Blaster (Jugador, Escena, 825-(500*qSin(Angulo)), y, Angulo);
+
+}
+
+void UnderTale::DonutBlaster(){
+    NumVar++;
+    int x = (rand()%451)+390;
+    bool blue = rand()%2;
+    new MeleeAT (Jugador,x,250,4,Escena,"Dona2.png",blue,20,100,270);
+    if (NumVar==4){
+        generarBlaster();
+        NumVar=0;
+    }
+}
+
+void UnderTale::BottleCircling(){
+    new MeleeAT(Jugador, 890, 325, 5, Escena, "Botella.png", false, 10, 55, 180);
+    new MeleeAT(Jugador, 390, 450, 5, Escena, "Botella.png", false, 10, 55, 0);
+}
+
+void UnderTale::RandomJumps(){
+    int Height = rand()%3;
+    qDebug()<<Height;
+    new MeleeAT(Jugador, 890, 300, 5, Escena, "Botella.png", false, 15, 50, 180);
+    new MeleeAT(Jugador, 390, 300, 5, Escena, "Botella.png", false, 15, 50, 0);
+    switch (Height){
+    case 0:
+        new MeleeAT(Jugador, 390, 430, 5, Escena, "Dona2.png", false, 15, 50, 0);
+        new MeleeAT(Jugador, 390, 460, 5, Escena, "Dona2.png", false, 15, 50, 0);
+        new MeleeAT(Jugador, 890, 430, 5, Escena, "Dona2.png", false, 15, 50, 180);
+        new MeleeAT(Jugador, 890, 460, 5, Escena, "Dona2.png", false, 15, 50, 180);
+
+        new MeleeAT(Jugador, 390, 570, 5, Escena, "Dona2.png", false, 15, 50, 0);
+        new MeleeAT(Jugador, 890, 570, 5, Escena, "Dona2.png", false, 15, 50, 180);
+        break;
+    case 1:
+        new MeleeAT(Jugador, 390, 420, 5, Escena, "Dona2.png", false, 15, 50, 0);
+        new MeleeAT(Jugador, 390, 450, 5, Escena, "Dona2.png", false, 15, 50, 0);
+        new MeleeAT(Jugador, 890, 420, 5, Escena, "Dona2.png", false, 15, 50, 180);
+        new MeleeAT(Jugador, 890, 450, 5, Escena, "Dona2.png", false, 15, 50, 180);
+
+        new MeleeAT(Jugador, 390, 540, 5, Escena, "Dona2.png", false, 15, 50, 0);
+        new MeleeAT(Jugador, 390, 570, 5, Escena, "Dona2.png", false, 15, 50, 0);
+        new MeleeAT(Jugador, 890, 540, 5, Escena, "Dona2.png", false, 15, 50, 180);
+        new MeleeAT(Jugador, 890, 570, 5, Escena, "Dona2.png", false, 15, 50, 180);
+        break;
+    case 2:
+        new MeleeAT(Jugador, 390, 475, 5, Escena, "Botella.png", false, 15, 50, 0);
+        new MeleeAT(Jugador, 890, 475, 5, Escena, "Botella.png", false, 15, 50, 180);
+        break;
+    }
+}
+
+void UnderTale::MoveFightButton(){
+    Luchar->setPos(Luchar->x()+9, Luchar->y()-6);
+    qDebug()<<Luchar->x()<<' '<<Luchar->y();
+    if (Luchar->x()==618 && Luchar->y()==428){
+        StopSpawn();
+        QPixmap Fight ("Fight.png");
+        Luchar->setPixmap(Fight.copy(120,0, 110, 42));
+    }
+}
     //____________________________________ATTACK SEQUENCE____________________________________//
 
 void UnderTale::AttackPattern(){
-    if (Atk == AtaqueActivo::Ninguno) {
+
+    switch(Atk){
+
+    case AtaqueActivo::Ninguno:
         Ataque1(*this);
         Atk = AtaqueActivo::ATK1;
         AtkDuration->start(10000);
         AtkDelay->start(11000);
-    }
-    else if (Atk == AtaqueActivo::ATK1) {
+        break;
+
+    case AtaqueActivo::ATK1:
         Ataque2(*this);
         Atk = AtaqueActivo::ATK2;
         AtkDuration->start(7500);
-        AtkDelay->start(8000);
-    }
-    else if (Atk == AtaqueActivo::ATK2) {
-        NumVar = 0;
+        AtkDelay->start(8500);
+        break;
+
+    case AtaqueActivo::ATK2:
+        Jugador->changeSoulMode();
         Ataque3(*this);
         Atk = AtaqueActivo::ATK3;
-        AtkDuration->start(15000);
-        AtkDelay->start(18000);
-    }
-    else if (Atk == AtaqueActivo::ATK3) {
-        Ataque4(*this);
-        Atk = AtaqueActivo::ATK4;
-        AtkDuration->start(15000);
-        AtkDelay->start(18000);
-    }
-    else if (Atk == AtaqueActivo::ATK4) {
-        disconnect(Spawn, &QTimer::timeout, this, &UnderTale::Burbujas);
-        Jugador->changeSoulMode();
-        Ataque5(*this);
-        Atk = AtaqueActivo::ATK5;
         AtkDuration->start(20000);
         AtkDelay->start(22000);
-    }
-    else if(Atk == AtaqueActivo::ATK5){
+        break;
+
+    case AtaqueActivo::ATK3:
         NumVar=0;
+        Ataque4(*this);
+        Atk = AtaqueActivo::ATK4;
+        AtkDuration->start(13000);
+        AtkDelay->start(14000);
+        break;
+
+    case AtaqueActivo::ATK4:
+        Jugador->changeSoulMode();
+        NumVar = 0;
+        Ataque5(*this);
+        Atk = AtaqueActivo::ATK5;
+        AtkDuration->start(15000);
+        AtkDelay->start(17000);
+        break;
+
+    case AtaqueActivo::ATK5:
+
         Ataque6(*this);
         Atk = AtaqueActivo::ATK6;
-        AtkDuration->start(13000);
-        AtkDelay->start(16000);
+        AtkDuration->start(15000);
+        AtkDelay->start(18000);
+        break;
 
-    }
-    else if(Atk == AtaqueActivo::ATK6){
+
+    case AtaqueActivo::ATK6:
+        Jugador->changeSoulMode();
+        disconnect(Spawn, &QTimer::timeout, this, &UnderTale::Burbujas);
+        NumVar=0;
+        Ataque7(*this);
+        Atk = AtaqueActivo::ATK7;
+        AtkDuration->start(20000);
+        AtkDelay->start(22000);
+        break;
+
+
+    case AtaqueActivo::ATK7:
+        Jugador->changeSoulMode();
+        NumVar = 0;
+        Ataque8(*this);
+        Atk = AtaqueActivo::ATK8;
+        AtkDuration->start(15000);
+        AtkDelay->start(18000);
+        break;
+
+
+    case AtaqueActivo::ATK8:
+        Jugador->changeSoulMode();
+        NumVar = 0;
+        Ataque9(*this);
+        Atk = AtaqueActivo::ATK9;
+        AtkDuration->start(15000);
+        AtkDelay->start(18000);
+        break;
+
+
+    case AtaqueActivo::ATK9:
+        Jugador->changeSoulMode();
+        AtaqueFinal(*this);
+        Atk = AtaqueActivo::ATKFINAL;
+        AtkDuration->start(15000);
+        AtkDelay->start(32000);
+        break;
+
+    case AtaqueActivo::ATKFINAL:
+        Jugador->clearFocus();
+        Jugador->setFlag(QGraphicsItem::ItemIsFocusable,false);
+        Jugador->MoveToCenter();
+        Jugador->stopSoul();
+        Atk = AtaqueActivo::EndCutscene;
+
+        Spawn->start(60);
+        AtkConnection=connect(Spawn, &QTimer::timeout, Jugador, &Alma::MoveToCenter);
+
+        OtherConnection=connect(Jugador, &Alma::Center, this, [=](){
+            disconnect(AtkConnection);
+            EndingCutScene(*this);
+        });
+
+        AtkDuration->start(8000);
+        AtkDelay->start(9000);
+        break;
+
+    case AtaqueActivo::EndCutscene:
         Atk = AtaqueActivo::Ninguno;
         ClearAll();
         Reproductor->setSource(QUrl("qrc:/Videos/Final Cutscene.mp4"));
@@ -317,22 +490,25 @@ void UnderTale::AttackPattern(){
         OtherConnection = connect(Reproductor, &QMediaPlayer::mediaStatusChanged, this, [=](QMediaPlayer::MediaStatus status){
             if (status == QMediaPlayer::EndOfMedia){
                 emit ReturnToMainMenu();
-                delete this;
             }
         });
+        break;
     }
+
+
 }
 
 //____________________________________CLEAR ALL____________________________________//
 
 void UnderTale::ClearAll(){
-    AtkDuration->stop();
-    AtkDelay->stop();
     Reproductor->stop();
     if (BackGround->scene() != nullptr) Escena->removeItem(BackGround);
     if (Jugador->scene() != nullptr) Escena->removeItem(Jugador);
     Jugador->removeHealthBar();
     if (Caja->scene() != nullptr) Escena->removeItem(Caja);
+    if (Luchar->scene() != nullptr) Escena->removeItem(Luchar);
+    if (BotonesP[0]->scene() == nullptr) Escena->removeItem(BotonesP[0]);
+    if (BotonesP[1]->scene() == nullptr) Escena->removeItem(BotonesP[1]);
     disconnect(AtkConnection);
     disconnect(OtherConnection);
     disconnect(Reproducir, &QPushButton::clicked,this,&UnderTale::StartGame);

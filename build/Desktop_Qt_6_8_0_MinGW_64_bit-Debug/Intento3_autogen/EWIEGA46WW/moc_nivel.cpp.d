@@ -22,7 +22,6 @@ C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_Min
   C:/Qt/6.8.0/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QUrl \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/Qdebug \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QtCore \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QtCoreDepends \
   C:/Qt/6.8.0/mingw_64/include/QtCore/q20algorithm.h \
@@ -288,8 +287,6 @@ C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_Min
   C:/Qt/6.8.0/mingw_64/include/QtCore/qxpfunctional.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qyieldcpu.h \
-  C:/Qt/6.8.0/mingw_64/include/QtGui/QBrush \
-  C:/Qt/6.8.0/mingw_64/include/QtGui/QKeyEvent \
   C:/Qt/6.8.0/mingw_64/include/QtGui/QPaintDevice \
   C:/Qt/6.8.0/mingw_64/include/QtGui/QPaintDeviceWindow \
   C:/Qt/6.8.0/mingw_64/include/QtGui/QSurfaceFormat \
@@ -510,26 +507,12 @@ C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_Min
   C:/Qt/6.8.0/mingw_64/include/QtNetwork/qtnetworkversion.h \
   C:/Qt/6.8.0/mingw_64/include/QtNetwork/qudpsocket.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsRectItem \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsScene \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsTextItem \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsView \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLayout \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicsview.h \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qscrollarea.h \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qwidget.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxbf16intrin.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxcomplexintrin.h \
@@ -872,4 +855,4 @@ C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_Min
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
-  C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/alma.h
+  C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/player.h

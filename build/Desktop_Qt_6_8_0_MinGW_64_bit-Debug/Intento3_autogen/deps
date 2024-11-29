@@ -522,6 +522,7 @@ Intento3_autogen/timestamp: \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsScene \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsTextItem \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGraphicsView \
+	C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLayout \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMainWindow \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
@@ -536,6 +537,7 @@ Intento3_autogen/timestamp: \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicsview.h \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgraphicswidget.h \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+	C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
 	C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmainwindow.h \
@@ -1149,6 +1151,8 @@ Intento3_autogen/timestamp: \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Intento3_autogen/moc_predefs.h \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/burbuja.cpp \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/burbuja.h \
+	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cabana.cpp \
+	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cabana.h \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cerveza.cpp \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/cerveza.h \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/main.cpp \
@@ -1156,8 +1160,14 @@ Intento3_autogen/timestamp: \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/mainwindow.h \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/meleeat.cpp \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/meleeat.h \
+	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/mountain.cpp \
+	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/mountain.h \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/nivel.cpp \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/nivel.h \
+	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/obstaculos.cpp \
+	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/obstaculos.h \
+	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/player.cpp \
+	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/player.h \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/undertale.cpp \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/undertale.h \
 	C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/mainwindow.ui \
