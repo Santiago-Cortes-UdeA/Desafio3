@@ -1,0 +1,36 @@
+{
+	"BUILD_DIR" : "C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/Intento3_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Release",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Release",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3",
+	"CMAKE_SOURCE_DIR" : "C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/Intento3_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/HomerFightBlack.png",
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Dona2.png",
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Alma.png",
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Final Final Cutscene.mp4",
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Starting Cutscene.mp4",
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Intro Cutscene.mp4",
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Final Cutscene.mp4",
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Determination.mp3",
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Menu Theme.mp3",
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/wel.mp3",
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Megalo.mp3",
+		"C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/8bitoperator.ttf"
+	],
+	"LOCK_FILE" : "C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/CMakeFiles/Intento3_autogen.dir/AutoRcc_Resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "Resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_Resources.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.8.0/mingw_64/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/CMakeFiles/Intento3_autogen.dir/AutoRcc_Resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/ozfluhs/Desktop/Desafio3/Jueguitooo/Intento3/Resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}
