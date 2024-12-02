@@ -1,6 +1,6 @@
-Nivel_1_Vencido 1
+Nivel_1_Vencido 0
 Nivel_1_NoHit 0
-Nivel_2_Vencido 1
+Nivel_2_Vencido 0
 Nivel_2_NoHit 0
 Nivel_1_MinimumDamageTaken 20
 Nivel_2_MinimumDamageTaken 3
